@@ -18,9 +18,13 @@ config :rocketpay, RocketpayWeb.Endpoint,
   pubsub_server: Rocketpay.PubSub,
   live_view: [signing_salt: "dO5rwmaO"]
 
-config :rocketpay, Rocketpay.Repo, 
+config :rocketpay, Rocketpay.Repo,
   migration_primary_key: [type: :binary_id],
   migration_foreign_key: [type: :binary_id]
+
+config :rocketpay, :basic_auth,
+  username: "mateus",
+  password: "123456"
 
 # Configures Elixir's Logger
 config :logger, :console,
